@@ -1,0 +1,20 @@
+
+page {
+	height: 100%;
+}
+.top {
+	margin-left: -1em;
+	width: 100vw;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	        align-items: flex-end;
+}
+.active {
+	color: black !important;
+	font-size: 0.95em !important;
+	font-weight: 1000;
+}
+

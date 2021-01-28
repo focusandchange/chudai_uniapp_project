@@ -1,0 +1,14 @@
+
+page {
+	height: 100%;
+	background-color: white;
+}
+.send {
+	border: 1px solid #D8D8D8;
+	color: #D8D8D8;
+}
+.noSend {
+	border: 1px solid #18D8A8;
+	color: #18D8A8;
+}
+

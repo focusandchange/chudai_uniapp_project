@@ -1,0 +1,23 @@
+
+page {
+		height: 100%
+}
+.active {
+		font-size: 1.2em;
+		font-weight: 1000;
+		/* border-bottom:2px solid #007AFF; */
+}
+.activeBord {
+		display: none;
+}
+
+	/* .active:after{
+	content: '111';
+   position: absolute;
+    width: 16px;
+    height: 2px;
+    left: 25%;
+    bottom: 0;
+    background-color: #4572ED;
+} */
+

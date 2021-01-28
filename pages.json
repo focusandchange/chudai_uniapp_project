@@ -1,0 +1,77 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+			"navigationStyle":"custom",// 去掉微信小程序顶部导航
+					"app-plus":{
+						"titleNView":false //去掉app+h5顶部导航
+					}
+			
+			
+			}
+		}
+
+        ,{
+            "path" : "pages/LecturerCenter/LecturerCenter",
+            "style" : {
+				"navigationStyle":"custom",// 去掉微信小程序顶部导航
+						"app-plus":{
+							"titleNView":false //去掉app+h5顶部导航
+						}
+			}
+        }
+        ,{
+            "path" : "pages/TrainerIntroduction/TrainerIntroduction",
+            "style" : {
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#18D8A8",
+			"navigationBarTitleText": "讲师简介"
+			}
+        }
+        ,{
+            "path" : "pages/InstructorCertification/InstructorCertification",
+            "style" : {
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#18D8A8",
+				"navigationBarTitleText": "讲师认证"
+			}
+        }
+        ,{
+            "path" : "pages/haoyoubangkan/haoyoubangkan",
+            "style" : {
+				"navigationBarTitleText": "砍价"
+			}
+        }
+        ,{
+            "path" : "pages/kechengduihuan/kechengduihuan",
+            "style" : {
+				"navigationBarTitleText": "课程兑换"
+			}
+        }
+        ,{
+            "path" : "pages/kechengduihuanjilu/kechengduihuanjilu",
+            "style" : {
+				"navigationBarTitleText": "兑换记录"
+			}
+        }
+        ,{
+            "path" : "pages/invitation/invitation",
+            "style" : {
+				"navigationBarTitleText": "邀请有礼"
+			}
+        }
+        ,{
+            "path" : "pages/invitationRecord/invitationRecord",
+            "style" : {
+				"navigationBarTitleText": "邀请记录"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

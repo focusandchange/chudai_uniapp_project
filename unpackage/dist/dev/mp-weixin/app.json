@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/LecturerCenter/LecturerCenter",
+    "pages/TrainerIntroduction/TrainerIntroduction",
+    "pages/InstructorCertification/InstructorCertification",
+    "pages/haoyoubangkan/haoyoubangkan",
+    "pages/kechengduihuan/kechengduihuan",
+    "pages/kechengduihuanjilu/kechengduihuanjilu",
+    "pages/invitation/invitation",
+    "pages/invitationRecord/invitationRecord"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "plugins": {},
+  "usingComponents": {},
+  "sitemapLocation": "sitemap63.json"
+}

@@ -1,0 +1,99 @@
+<template>
+	<!--#ifdef MP-WEIXIN-->
+	<view style="height: 100vh;background:url(../../static/images/background_kechengduihuan.png) no-repeat 0 0 /100% 100%;">
+		<view class="back" style="width: 90vw;margin-left: 50%;transform: translate(-50%,45vh);border-radius: 10px;">
+			<view style="margin: 0 1em;padding: 2em 1em 1em 1em;display: flex;flex-direction: column;align-items: center;border-bottom:1px dashed  #999999;">
+				<view style="font-size: 0.5em;color: #FFA095;">-兑换说明-</view>
+				<view style="font-size: 0.5em;color:#FFA095;">一个兑换码只能兑换一次。如有疑问请联系客服</view>
+				<input v-model="exchange_code"  placeholder="兑换码" placeholder-style="color: #999999;" style="margin: 1.5em 0.5em 1.5em 0.5em;width: 70%;height:3em;background-color: #EEEEEE;border-radius: 50px;display: flex;justify-content: center;align-items: center;text-align: center;">
+				<view style="font-size: 0.5em;color: #999999;">
+					·请正确输入兑换码信息
+				</view>
+			</view>
+			
+			<view style="padding: 1em 2em 1.5em 2em;display: flex;flex-direction: column;align-items: center;">
+				<view style="color: white;margin:0em 0.5em 1em 0.5em;width: 70%;height:3em;background-color: #FF8A7C;border-radius: 50px;display: flex;justify-content: center;align-items: center;">
+					立即兑换
+				</view>
+				<view @click="record" style="padding-bottom: 0%;font-size: 0.5em;color: #666666;">兑换记录>></view>
+			</view>
+		</view>
+	</view>
+	<!--#endif-->
+	<!--#ifndef MP-WEIXIN-->
+	<view style="height: 100%;background:url(../../static/images/background_kechengduihuan.png) no-repeat 0 0 /100% 100%;">
+		<view class="back" style="width: 90vw;margin-left: 50%;transform: translate(-50%,45vh);border-radius: 10px;">
+			<view style="margin: 0 1em;padding: 2em 1em 1em 1em;display: flex;flex-direction: column;align-items: center;border-bottom:1px dashed  #999999;">
+				<view style="font-size: 0.5em;color: #FFA095;">-兑换说明-</view>
+				<view style="font-size: 0.5em;color:#FFA095;">一个兑换码只能兑换一次。如有疑问请联系客服</view>
+				<input v-model="exchange_code"  placeholder="兑换码" placeholder-style="color: #999999;" style="margin: 1.5em 0.5em 1.5em 0.5em;width: 70%;height:3em;background-color: #EEEEEE;border-radius: 50px;display: flex;justify-content: center;align-items: center;text-align: center;">
+				<view style="font-size: 0.5em;color: #999999;">
+					·请正确输入兑换码信息
+				</view>
+			</view>
+	
+			<view style="padding: 1em 2em 1.5em 2em;display: flex;flex-direction: column;align-items: center;">
+				<view @click="exchange" style="color: white;margin:0em 0.5em 1em 0.5em;width: 70%;height:3em;background-color: #FF8A7C;border-radius: 50px;display: flex;justify-content: center;align-items: center;">
+					立即兑换
+				</view>
+				<view @click="record" style="padding-bottom: 0%;font-size: 0.5em;color: #666666;">兑换记录>></view>
+			</view>
+		</view>
+	</view>
+	<!--#endif-->
+	
+	
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				exchange_code:""
+			}
+		},
+		methods: {
+			record:function(){
+
+				uni.navigateTo({
+					url: '../kechengduihuanjilu/kechengduihuanjilu'
+				});
+				
+			},
+			exchange:function(){
+				uni.request({
+					url:'https://h5.chudaikeji.com/demo/education/web/index.php/api/exchange/get-course',
+					data: {
+						exchange_code:this.exchange_code,
+						user_id:66
+					},
+					method:'POST',
+					header:{
+						'content-type': 'application/x-www-form-urlencoded'
+					},
+					success: res => {
+						console.log(res)
+					},
+					fail: function() {
+						console.log("fail")
+					}
+				})
+			}
+			
+		}
+	}
+</script>
+
+<style>
+uni-page-body{
+
+	height:100%;
+}
+.back{
+	
+	background: url(../../static/images/back.png) no-repeat 0 0 / 100% 100%;
+	
+	
+}
+
+</style>
