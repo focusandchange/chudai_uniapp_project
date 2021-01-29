@@ -30,11 +30,11 @@
 				exchange_time: [],
 				page:1,
 				isNull:0,
-				count:0,
 				isEnd:0,
 				text1:"",
 				text2:"",
-				text3:""
+				text3:"",
+				FixedNumber: 6
 			}
 		},
 		onLoad() {
@@ -57,7 +57,10 @@
 						this.isNull=1
 					}
 					else{
-						this.count=res.data.data.length
+						this.isNull = 0
+						if (res.data.data.length < this.FixedNumber) {
+							this.isEnd = 1
+						}
 					}
 					
 					this.record = res.data.data
@@ -125,10 +128,10 @@
 						'content-type': 'application/x-www-form-urlencoded'
 					},
 					success: res => {
-						if(this.count>res.data.data.length)
-						{
-							this.isEnd=1
-						}
+					if (res.data.data.length < this.FixedNumber) {
+						this.isEnd = 1
+					}
+									
 						
 						var length=this.record.length
 					 this.record = this.record.concat(res.data.data);

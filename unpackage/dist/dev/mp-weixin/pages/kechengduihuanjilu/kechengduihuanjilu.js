@@ -160,11 +160,11 @@ var _default =
       exchange_time: [],
       page: 1,
       isNull: 0,
-      count: 0,
       isEnd: 0,
       text1: "",
       text2: "",
-      text3: "" };
+      text3: "",
+      FixedNumber: 6 };
 
   },
   onLoad: function onLoad() {var _this = this;
@@ -187,7 +187,10 @@ var _default =
           _this.isNull = 1;
         } else
         {
-          _this.count = res.data.data.length;
+          _this.isNull = 0;
+          if (res.data.data.length < _this.FixedNumber) {
+            _this.isEnd = 1;
+          }
         }
 
         _this.record = res.data.data;
@@ -255,10 +258,10 @@ var _default =
           'content-type': 'application/x-www-form-urlencoded' },
 
         success: function success(res) {
-          if (_this2.count > res.data.data.length)
-          {
+          if (res.data.data.length < _this2.FixedNumber) {
             _this2.isEnd = 1;
           }
+
 
           var length = _this2.record.length;
           _this2.record = _this2.record.concat(res.data.data);

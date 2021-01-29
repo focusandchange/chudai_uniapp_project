@@ -17,7 +17,8 @@
         },
         "modules" : {
             "Payment" : {},
-            "Geolocation" : {}
+            "Geolocation" : {},
+            "Share" : {}
         },
         "distribute" : {
             "android" : {
@@ -68,6 +69,12 @@
                     "weixin" : {
                         "appid" : "",
                         "appsecret" : "",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wxaf62be1e178ca589",
                         "UniversalLinks" : ""
                     }
                 }

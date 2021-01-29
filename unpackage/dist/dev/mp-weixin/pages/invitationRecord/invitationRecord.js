@@ -24,42 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -90,11 +55,115 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   data: function data() {
-    return {};
-
+    return {
+      invite_list: [],
+      time: "",
+      invite_time: [],
+      page: 1,
+      isNull: 0,
+      isEnd: 0,
+      text1: "",
+      text2: "",
+      text3: "",
+      FixedNumber: 6 };
 
   },
-  methods: {} };exports.default = _default;
+  onLoad: function onLoad() {var _this = this;
+    uni.request({
+      url: 'https://h5.chudaikeji.com/demo/education/web/index.php/api/invite/invite-list',
+      data: {
+        invite_id: 63,
+        page: this.page },
+
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' },
+
+      success: function success(res) {
+        _this.text1 = "点击加载更多↓";
+        _this.text2 = "没有更多了";
+        _this.text3 = "暂无记录";
+        if (res.data.data.length == 0) {
+          _this.isNull = 1;
+        } else {
+          _this.isNull = 0;
+          if (res.data.data.length < _this.FixedNumber) {
+            _this.isEnd = 1;
+          }
+        }
+        _this.invite_list = res.data.data;
+        console.log(res.data.data);
+        for (var i = 0; i < res.data.data.length; i++)
+        {
+          _this.timeFunction(res.data.data[i].add_time);
+          _this.invite_time[i] = {
+            "time": _this.time };
+
+        }
+
+
+      },
+      fail: function fail() {
+        console.log("fail");
+      } });
+
+  },
+  methods: {
+    timeFunction: function timeFunction(parameter) {
+      var date = new Date(parameter * 1000);
+      var year = date.getFullYear();
+      if (date.getMonth() + 1 < 10) {
+        var month = "0" + (date.getMonth() + 1);
+      } else {
+        var month = date.getMonth() + 1;
+      }
+      if (date.getDate() < 10) {
+        var day = "0" + date.getDate();
+      } else {
+        var day = date.getDate();
+      }
+      if (date.getHours() < 10) {
+        var hours = "0" + date.getHours();
+      } else {
+        var hours = date.getHours();
+      }
+      if (date.getMinutes() < 10) {
+        var minutes = "0" + date.getMinutes();
+      } else {
+        var minutes = date.getMinutes();
+      }
+
+      this.time = year + "-" + month + "-" + day;
+
+    },
+    more: function more() {var _this2 = this;
+      this.page = this.page + 1;
+      uni.request({
+        url: 'https://h5.chudaikeji.com/demo/education/web/index.php/api/invite/invite-list',
+        data: {
+          invite_id: 63,
+          page: this.page },
+
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded' },
+
+        success: function success(res) {
+          if (res.data.data.length < _this2.FixedNumber) {
+            _this2.isEnd = 1;
+          }
+
+          var length = _this2.invite_list.length;
+          _this2.invite_list = _this2.invite_list.concat(res.data.data);
+
+        },
+
+        fail: function fail() {
+          console.log("fail");
+        } });
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

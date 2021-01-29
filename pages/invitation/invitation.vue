@@ -1,9 +1,9 @@
 <template>
-	<view style="display: flex;flex-direction: column;justify-content: center;align-items: center;width: 100%;background: url(../../static/images/invitationBackground.png) no-repeat 0 0 / 100% 100%;">
+	<view style="width:100%;height:100%;display: flex;flex-direction: column;justify-content: center;align-items: center;width: 100%;background: url(../../static/images/invitationBackground.png) no-repeat 0 0 / 100% 100%;">
 		
-		<view style="margin-top: 55vh;color:#ED5146;background-color: white;width: 90%;height:3em;border-radius: 5px;margin-bottom: 0.5em;display: flex;justify-content: center;align-items: center;">
+		<button open-type="share" :data-type='2' :data-id='1' @click="invitationFriend" style="margin-top: 55vh;color:#ED5146;background-color: white;width: 90%;height:2.8em;border-radius: 5px;margin-bottom: 0.5em;display: flex;justify-content: center;align-items: center;">
 			邀请好友
-		</view>
+		</button>
 		<view @click="invitationRecord" style="color:white;background-color: #ED5146;width: 90%;height:3em;border-radius: 5px;display: flex;justify-content: center;align-items: center;">
 			邀请记录
 		</view>
@@ -55,8 +55,21 @@
 				uni.navigateTo({
 					url: '../invitationRecord/invitationRecord'
 				});
+			},
+			invitationFriend:function(){
+
 			}
-		}
+		},
+		onShareAppMessage(res) {
+		   // if (res.from === 'button') {// 来自页面内分享按钮
+		   //   console.log(res.target)
+		   // }
+		   return {
+		     title: '自定义分享标题',
+		     path: '../index/index',
+			 imageUrl:"https://vkceyugu.cdn.bspapp.com/VKCEYUGU-uni-app-doc/d8590190-4f28-11eb-b680-7980c8a877b8.png"
+		   }
+		 }
 	}
 </script>
 

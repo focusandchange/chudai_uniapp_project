@@ -187,7 +187,21 @@ var _default =
       uni.navigateTo({
         url: '../invitationRecord/invitationRecord' });
 
-    } } };exports.default = _default;
+    },
+    invitationFriend: function invitationFriend() {
+
+    } },
+
+  onShareAppMessage: function onShareAppMessage(res) {
+    // if (res.from === 'button') {// 来自页面内分享按钮
+    //   console.log(res.target)
+    // }
+    return {
+      title: '自定义分享标题',
+      path: '../index/index',
+      imageUrl: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-uni-app-doc/d8590190-4f28-11eb-b680-7980c8a877b8.png" };
+
+  } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

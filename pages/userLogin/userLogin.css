@@ -1,0 +1,78 @@
+.bc {
+	overflow: hidden;
+	width: 100%;
+	height: 680rpx;
+	background-color: #008388;
+}
+
+.logo1 {
+	display: block;
+	margin: 80rpx auto 0;
+	width: 280rpx;
+	height: 240rpx;
+}
+
+.logo2 {
+	display: block;
+	margin: 40rpx auto;
+	width: 240rpx;
+	height: 60rpx;
+}
+
+.input_area {
+	margin: -100rpx auto;
+	width: 620rpx;
+	border-radius: 15rpx;
+	background-color: #fff;
+	padding: 30rpx 60rpx 100rpx;
+}
+
+u-form-item {
+	width: 100%!important;
+}
+
+.switch .u-subsection {
+	border-radius: 35px!important;
+}
+
+.submit {
+	width: 470rpx;
+	height: 100rpx;
+	background-color: #00989D;
+	border-radius: 15rpx;
+	margin:55rpx auto 55rpx;
+	text-align: center;
+	line-height: 100rpx;
+	color: #fff;
+	letter-spacing: 4rpx;
+	
+}
+
+.u-subsection uni-view {
+	border-radius: 35px!important;
+}
+
+.btns {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	width: 430rpx;
+	height: 70rpx;
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 35rpx;
+}
+
+.btn {
+	text-align: center;
+	width: 50%;
+	height: 60rpx;
+	line-height: 60rpx;
+	color: #fff;
+	font-weight: 500;
+}
+
+.btn_active {
+	border-radius: 35rpx;
+	background-color: #fff;
+	color: #008388;
+}
