@@ -4,7 +4,7 @@
 			<view style="padding-top:2em ;height: 35%;width: 100%;display: flex;flex-direction: column;align-items: center;">
 
 				<view :style="{'position': 'relative','width': '7em','height':'7em','border-radius': '1em','background': 'url('+avatar+') no-repeat 60% 40% / 145%'}">
-					<view style="width: 3em;height: 3em;position: absolute;background: url('../../static/images/flag.png') no-repeat 30% -40% / 105%">
+					<view style="width: 3em;height: 3em;position: absolute;background: url('static/images/flag.png') no-repeat 30% -40% / 105%">
 						<!--#ifdef MP-WEIXIN-->
 						<view style="color: white;font-size: 0.4em;transform: rotateZ(-40deg);margin-top: 1em;margin-left: -1em;">
 							<view>
@@ -25,10 +25,10 @@
 				<view style="display: flex;justify-content: center;align-items: center;">
 					<view style="margin:0.5em 0 0.5em 1.4em;font-size: 1.4em;font-weight: 1000;color: white;">{{name}}</view>
 					<view @click="like" v-if="isLike" style="display: flex;justify-content: center;align-items: center;margin-left: 0.5em;width: 1.3em;height:1.3em;background-color: white;border-radius: 11px;">
-						<view style="margin-top: 0.3em;width: 0.8em;height:0.8em;background: url(../../static/images/heart1.png) no-repeat 0% 0% /100%;"></view>
+						<image src="../../static/images/heart1.png" style="margin-top: 0.3em;width: 0.8em;height:0.8em;"></image>
 					</view>
 					<view @click="like" v-else-if="!isLike" style="display: flex;justify-content: center;align-items: center;margin-left: 0.5em;width:1.3em;height:1.3em;background-color: white;border-radius: 11px;">
-						<view style="margin-top: 0.3em;width: 0.8em;height:0.8em;background: url(../../static/images/heart2.png) no-repeat 0% 0% /100%;"></view>
+						<image src="../../static/images/heart2.png" style="margin-top: 0.3em;width: 0.8em;height:0.8em;"></image>
 					</view>
 				</view>
 				<view style="margin:0 0 0 0.5em;font-size: 1em;color: white;">擅长领域：{{course_sort_name}}</view>
@@ -58,7 +58,7 @@
 				</view>
 				<view :class="[isActive?'':'activeBord']" style="width: 100%;height:100%;">
 					<view style="flex:1;display: flex;margin:0.5em 0;padding: 1em;">
-						<view style="flex:0.25;width: 3em;height: 6.5em;border-radius: 10px;background: url(../../static/images/lesson.png) no-repeat 0 0 / 100% 100%;">
+						<view style="flex:0.25;width: 3em;height: 6.5em;border-radius: 10px;background: url(static/images/lesson.png) no-repeat 0 0 / 100% 100%;">
 
 
 						</view>
@@ -80,7 +80,7 @@
 						</view>
 					</view>
 					<view style="flex:1;display: flex;margin:0.5em 0;padding: 1em;">
-						<view style="flex:0.25;width: 3em;height: 6.5em;background-color: #007AFF;border-radius: 10px;background: url(../../static/images/lesson.png) no-repeat 0 0 / 100% 100%;"></view>
+						<view style="flex:0.25;width: 3em;height: 6.5em;background-color: #007AFF;border-radius: 10px;background: url(static/images/lesson.png) no-repeat 0 0 / 100% 100%;"></view>
 						<view style="flex:0.75">
 							<view style="display: flex;padding: 0.2em;">
 								<view style="background-color: #FF7860;border-radius: 6px 1px 6px 1px;padding:0 0.3em;font-size: 0.5em;color: white;margin: 0.2em;">数学</view>
@@ -113,7 +113,7 @@
 				name:"",
 				lecturer_introduction:"",
 				brief_introduction:"",
-				avatar:"../../static/images/teacher.png",
+				avatar:"static/images/teacher.png",
 				course_sort_name:""
 
 			}

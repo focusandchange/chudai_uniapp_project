@@ -104,9 +104,19 @@
 				},
 				isSendCode: 0,
 				count: 60,
+				invite_id:null
 			}
 		},
-
+		onLoad(option){
+			console.log("------------")
+			console.log(option.invite_id)
+			console.log("------------")
+			if(option.invite_id==null)
+			{}
+			else{
+				this.invite_id=option.invite_id
+			}
+		},
 		methods: {
 
 			//验证字符串是否为空
@@ -188,14 +198,14 @@
 							code:that.form.verificationCode
 						},
 						success: res => {
-							console.log(res)
+					console.log(res)
 							if (res.code == 1) {
 								uni.showToast({
 									icon: "none",
 									title: res.msg
 								})
 							} else {
-								console.log(res)
+
 								uni.showToast({
 									icon: "none",
 									title: "注册成功！",
@@ -203,6 +213,12 @@
 								})
 								that.block = 1;
 								that.active = 1;
+								if(this.invite_id==null)
+								{}
+								else{
+									this.invite(res.data.user_id);
+								}
+
 							}
 						},
 					})
@@ -233,13 +249,16 @@
 							'content-type': 'application/x-www-form-urlencoded'
 						},
 						success: res => {
+							
 							//1代表登录失败
 							if (res.data.code == 1) {
+							
 								uni.showToast({
 									icon: "none",
 									title: res.msg
 								})
 							} else {
+								
 								uni.setStorageSync("user_info", res.data.user_info)
 								uni.setStorageSync("access_token", res.data.access_token);
 								// uni.setStorageSync("user_balance", res.data.balance)
@@ -315,6 +334,26 @@
 			}
 				
 			
+			},
+			invite:function(user_id){
+				console.log(user_id)
+				uni.request({
+					url: 'https://h5.chudaikeji.com/demo/education/web/index.php/api/invite/invite-friends',
+					data: {
+					invite_id:this.invite_id,
+					beinviter_id:user_id
+					},
+					method: 'POST',
+					header: {
+						'content-type': 'application/x-www-form-urlencoded'
+					},
+					success: res => {
+					console.log(res)
+					},
+					fail: function() {
+						console.log("fail")
+					}
+				})
 			}
 		}
 	}

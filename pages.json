@@ -79,11 +79,54 @@
 				"navigationBarTitleText": "初代演示商城"
 			}
 		}
+        ,{
+            "path" : "pages/profit/profit",
+            "style" : {
+
+					"navigationBarTitleText": "我的收益"
+				
+			}
+        }
+        ,{
+            "path" : "pages/myStudents/myStudents",
+            "style" : {
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#3297FF",
+				"navigationBarTitleText": "我的学员"
+			}
+        }
+        ,{
+            "path" : "pages/evaluate/evaluate",
+            "style" : {
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#3297FF",
+				"navigationBarTitleText": "评价列表"
+			}
+        }
+        ,{
+            "path" : "pages/myCourse/myCourse",
+            "style" : {
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#18D8A8",
+				"navigationBarTitleText": "我的课程"
+			}
+        }
+        ,{
+            "path" : "pages/withdrawal/withdrawal",
+            "style" : {
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "white",
+				"navigationBarTitleText": "申请提现"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"app-plus":{
+			"titleNView":false //去掉app+h5顶部导航
+		}
 	}
 }

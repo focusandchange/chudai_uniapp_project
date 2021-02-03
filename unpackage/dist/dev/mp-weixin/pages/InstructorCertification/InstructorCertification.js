@@ -368,7 +368,6 @@ var _default =
     photo: function photo() {var _this2 = this;
       uni.chooseImage({
         success: function success(res) {
-
           _this2.avatar = res.tempFilePaths[0];
 
         } });

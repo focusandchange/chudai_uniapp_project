@@ -1,10 +1,10 @@
 <template>
 	<view style="background-color: white;display: flex;flex-direction: column;align-items: center;padding: 0em 2em 0em 2em;">
 		<view style="padding: 1.5em;display: flex;flex-direction: column;">
-			<view :style="{'width':'5em','height':'5em','border-radius':'50px','background':'url('+avatar+') no-repeat 0 0 / 100% 100%'}">
+			<image :src="avatar"  style="width:5em;height:5em;border-radius:50px">
 		<!-- 55% 35% 230%		 -->
-				<image style="width: 5em;height: 5em;"></image>
-			</view>
+				<!-- <image style="width: 5em;height: 5em;"></image> -->
+			</image>
 			<view @click="photo" style="width: 1.5em;height: 1.5em;border-radius: 50px;align-self: flex-end;margin-top: -1.7em;">
 				<image src="../../static/images/camera.png" mode="widthFix" style="width: 100%;"></image>
 			</view>
@@ -236,7 +236,6 @@
 			photo:function(){
 				uni.chooseImage({
 					success: (res) => {
-					
 						this.avatar=res.tempFilePaths[0]
 			
 					}

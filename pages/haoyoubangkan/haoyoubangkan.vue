@@ -1,13 +1,13 @@
 <template>
-	<view style="padding:4em 1em 1em 1em;background: url('../../static/images/Background.png') no-repeat 0 0 /100% 100%;">
+	<view style="padding:4em 1em 1em 1em;background: url('static/images/Background.png') no-repeat 0 0 /100% 100%;">
 		<view style="background-color: white;border-radius: 10px;">
 			<view style="display: flex;flex-direction: column;align-items: center;border-bottom: 2px solid #D8D8D8;">
-				<view style="width: 5em;height:5em;margin-top: -2.5em;border-radius: 50px;background: url(../../static/images/photo.png) no-repeat 0 0 / 100% 100%;"></view>
+				<image src="../../static/images/photo.png" style="width: 5em;height:5em;margin-top: -2.5em;border-radius: 50px;"></image>
 				<view style="font-weight: 1000;padding: 0.5em;">晴天</view>
 				<view style="padding-bottom: 0.5em;color: #787878;font-size: 0.5em;">我发现一件好货，来一起砍价优惠购！</view>
 			</view>
 			<view style="display: flex;padding: 0.5em;border-bottom: 2px solid #D8D8D8;">
-				<view style="width: 7em;height: 7em;background:url(../../static/images/yun.png) no-repeat 0 0/100%"></view>
+				<image src="../../static/images/yun.png" style="width: 7em;height: 7em;"></image>
 				<view style="padding-left: 1em;">
 					<view style="font-weight: 1000;">精品语文冲刺课</view>
 					<view style="margin:0.5em 0;display: flex;justify-content: center;align-items: center;">

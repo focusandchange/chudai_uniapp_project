@@ -1,6 +1,6 @@
 <template>
 	<!--#ifdef MP-WEIXIN-->
-	<view style="height: 100vh;background:url(../../static/images/background_kechengduihuan.png) no-repeat 0 0 /100% 100%;">
+	<view style="height: 100vh;background:url(static/images/background_kechengduihuan.png) no-repeat 0 0 /100% 100%;">
 		<view class="back" style="width: 90vw;margin-left: 50%;transform: translate(-50%,45vh);border-radius: 10px;">
 			<view style="margin: 0 1em;padding: 2em 1em 1em 1em;display: flex;flex-direction: column;align-items: center;border-bottom:1px dashed  #999999;">
 				<view style="font-size: 0.5em;color: #FFA095;">-兑换说明-</view>
@@ -21,7 +21,7 @@
 	</view>
 	<!--#endif-->
 	<!--#ifndef MP-WEIXIN-->
-	<view style="height: 100%;background:url(../../static/images/background_kechengduihuan.png) no-repeat 0 0 /100% 100%;">
+	<view style="height: 100%;background:url(static/images/background_kechengduihuan.png) no-repeat 0 0 /100% 100%;">
 		<view class="back" style="width: 90vw;margin-left: 50%;transform: translate(-50%,45vh);border-radius: 10px;">
 			<view style="margin: 0 1em;padding: 2em 1em 1em 1em;display: flex;flex-direction: column;align-items: center;border-bottom:1px dashed  #999999;">
 				<view style="font-size: 0.5em;color: #FFA095;">-兑换说明-</view>

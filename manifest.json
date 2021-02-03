@@ -112,7 +112,7 @@
         },
         "router" : {
             "mode" : "hash",
-            "base" : ""
+            "base" : "/game/test/h5/"
         },
         "title" : "初代科技商城",
         "sdkConfigs" : {

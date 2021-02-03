@@ -6,7 +6,7 @@
 				<view style="display: flex;justify-content: flex-start;padding: 0 0.5em;">
 					<view style="flex:1;width: 100%;display: flex;border:1px solid #DDDDDD;border-radius: 9rpx;padding: 0.3em;">
 						<view style="width: 8%;display: flex;justify-content: center;align-items: center;">
-							<image mode="widthFix" style="width: 80%;" src="/static/images/icon-search.png"></image>
+							<image mode="widthFix" style="width: 80%;" src="../../static/images/icon-search.png"></image>
 						</view>
 						<view style="margin-left: 0.5em;width: 92%;display: flex;justify-content: center;align-items: center;">
 							<input confirm-type="search" @confirm="confirm" type="text" v-model="keyword" style="width: 100%;" placeholder="请输入关键词"></input>
@@ -22,7 +22,7 @@
 				<view style="display: flex;justify-content: center;padding: 0 0.5em;">
 					<view style="width: 100%;display: flex;border:1px solid #DDDDDD;border-radius: 9rpx;padding: 0.3em;">
 						<view style="width: 8%;display: flex;justify-content: center;align-items: center;">
-							<image mode="widthFix" style="width: 80%;" src="/static/images/icon-search.png"></image>
+							<image mode="widthFix" style="width: 80%;" src="../../static/images/icon-search.png"></image>
 						</view>
 						<view style="margin-left: 0.5em;width: 92%;display: flex;justify-content: center;align-items: center;">
 							<input confirm-type="search" @confirm="confirm" type="text" v-model="keyword" style="width: 100%;" placeholder="请输入关键词"></input>
@@ -45,18 +45,18 @@
 				</text>
 			</view>
 		</view>
-		<swiper style="height: 10em;" :indicator-dots="false" :autoplay="true" :interval="3000" :duration="500">
+		<swiper @click="tt" style="height: 10em;" :indicator-dots="false" :autoplay="true" :interval="3000" :duration="500">
 			<swiper-item>
-				<view style="width: 100%;height: 10em;background: url(../../static/images/advertisement.png) no-repeat 0 0 /100% 100%;">
-				</view>
+				<image src="../../static/images/advertisement.png" style="width: 100%;height: 10em;">
+				</image>
 			</swiper-item>
 			<swiper-item>
-				<view style="width: 100%;height: 10em;background: url(../../static/images/advertisement.png) no-repeat 0 0 /100% 100%;">
-				</view>
+				<image src="../../static/images/advertisement.png" style="width: 100%;height: 10em;">
+				</image>
 			</swiper-item>
 			<swiper-item>
-				<view style="width: 100%;height: 10em;background: url(../../static/images/advertisement.png) no-repeat 0 0 /100% 100%;">
-				</view>
+				<image src="../../static/images/advertisement.png" style="width: 100%;height: 10em;">
+				</image>
 			</swiper-item>
 		</swiper>
 		<!--#ifdef MP-WEIXIN-->
@@ -157,6 +157,7 @@
 			}
 		},
 		onLoad() {
+		
 			var statusBarHeight = uni.getSystemInfoSync().statusBarHeight
 			if (statusBarHeight == 44) {
 				this.titleHeight = '83px'
@@ -439,6 +440,11 @@
 						console.log("fail")
 					}
 				})
+			},
+			tt:function(){
+				uni.navigateTo({
+					url: '../invitation/invitation'
+				});
 			}
 		}
 	}

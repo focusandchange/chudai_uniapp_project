@@ -1,0 +1,87 @@
+<template>
+	<view style="padding: 2em;">
+		<view style="color: white;padding: 1em;width: 100%;height:10em;background: url(static/images/profit1.png) no-repeat 0 0 / 100% 100%;">
+			<view>总收益</view>
+			<view style="margin:1em 0;display: flex;">
+				<view style="flex:1;font-size: 2.5em;">10,000.00</view>
+				<view style="margin-top: 0.5em;margin-left: 3em;flex:1;display: flex;justify-content: center;align-items: center;">
+					提现
+					<text style="margin-left: 0.2em;display: inline-block;width: 15rpx;height: 15rpx;border-top: 1px solid white;border-right: 1px solid white;transform: rotate(45deg);">
+					</text>
+				</view>
+			</view>
+			<view style="display: flex;font-size: 0.5em;">
+				<view>
+					<view>可提现收益：￥666.00</view>
+				</view>
+				<view style="margin-left: 3em;">
+					<view>已提现收益：￥1000.00</view>
+				</view>
+			</view>
+		</view>
+		<view style="margin:1em 0;padding: 1em 0;background-color: white;display: flex;justify-content: center;font-size: 1.2em;box-shadow:1px 1px 14px 1px rgba(0,0,0,0.1);border-radius:5px;">
+			<image src="../../static/images/withdrawalRecord.png" mode="widthFix" style="width: 1.5em;"></image>
+			<view style="margin-left: 0.5em;display: flex;align-items: center;">提现记录</view>
+		</view>
+		<view style="font-size: 1.2em;margin-top: 1.5em;">收益记录</view>
+		<view style="padding: 1em;margin: 2em 0;display: flex;box-shadow:1px 1px 14px 1px rgba(0,0,0,0.1);border-radius:5px;">
+			<view style="flex:6">
+				<view style="font-weight: bold;font-size: 1.1em;">初二数学课程</view>
+				<view style="font-size: 0.5em;padding: 0.5em 0;color:#999999">购买用户：15080048874</view>
+				<view style="font-size: 0.5em;color:#999999">2021-01-01 22:00</view>
+			</view>
+			<view style="flex:3;display: flex;justify-content: center;align-items: center;font-size: 1.5em;color: #FC451B;">+100.00</view>
+			
+			<view style="flex:1;display: flex;justify-content: center;align-items: center;">
+				<text style="margin-left: 1em;display: inline-block;width: 15rpx;height: 15rpx;border-top: 1px solid black;border-right: 1px solid black;transform: rotate(45deg);">
+				</text>
+			</view>
+			
+		</view>
+		<view style="padding: 1em;margin: 2em 0;display: flex;box-shadow:1px 1px 14px 1px rgba(0,0,0,0.1);border-radius:5px;">
+			<view style="flex:6">
+				<view style="font-weight: bold;font-size: 1.1em;">初二数学课程</view>
+				<view style="font-size: 0.5em;padding: 0.5em 0;color:#999999">购买用户：15080048874</view>
+				<view style="font-size: 0.5em;color:#999999">2021-01-01 22:00</view>
+			</view>
+			<view style="flex:3;display: flex;justify-content: center;align-items: center;font-size: 1.5em;color: #FC451B;">+100.00</view>
+			
+			<view style="flex:1;display: flex;justify-content: center;align-items: center;">
+				<text style="margin-left: 1em;display: inline-block;width: 15rpx;height: 15rpx;border-top: 1px solid black;border-right: 1px solid black;transform: rotate(45deg);">
+				</text>
+			</view>
+			
+		</view>
+		<view style="padding: 1em;margin: 2em 0;display: flex;box-shadow:1px 1px 14px 1px rgba(0,0,0,0.1);border-radius:5px;">
+			<view style="flex:6">
+				<view style="font-weight: bold;font-size: 1.1em;">初二数学课程</view>
+				<view style="font-size: 0.5em;padding: 0.5em 0;color:#999999">购买用户：15080048874</view>
+				<view style="font-size: 0.5em;color:#999999">2021-01-01 22:00</view>
+			</view>
+			<view style="flex:3;display: flex;justify-content: center;align-items: center;font-size: 1.5em;color: #FC451B;">+100.00</view>
+			
+			<view style="flex:1;display: flex;justify-content: center;align-items: center;">
+				<text style="margin-left: 1em;display: inline-block;width: 15rpx;height: 15rpx;border-top: 1px solid black;border-right: 1px solid black;transform: rotate(45deg);">
+				</text>
+			</view>
+			
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>

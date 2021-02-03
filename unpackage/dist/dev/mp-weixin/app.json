@@ -8,7 +8,13 @@
     "pages/kechengduihuan/kechengduihuan",
     "pages/kechengduihuanjilu/kechengduihuanjilu",
     "pages/invitation/invitation",
-    "pages/invitationRecord/invitationRecord"
+    "pages/invitationRecord/invitationRecord",
+    "pages/userLogin/userLogin",
+    "pages/profit/profit",
+    "pages/myStudents/myStudents",
+    "pages/evaluate/evaluate",
+    "pages/myCourse/myCourse",
+    "pages/withdrawal/withdrawal"
   ],
   "subPackages": [],
   "window": {
@@ -24,5 +30,5 @@
   },
   "plugins": {},
   "usingComponents": {},
-  "sitemapLocation": "sitemap67.json"
+  "sitemapLocation": "sitemap35.json"
 }

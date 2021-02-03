@@ -1,7 +1,7 @@
 <template>
-	<view style="background: url(../../static/images/circle.png) no-repeat 0 0 /100% 100%;display: flex;flex-direction: column;align-items: center;">
+	<view style="background: url(static/images/circle.png) no-repeat 0 0 /100% 100%;display: flex;flex-direction: column;align-items: center;">
 		<view style="box-shadow:0px 5px 5px 0px rgba(0,0,0,0.1);border-radius: 10px;background-color:white;width: 90%;height:15%;margin: 7em 0.5em 1em 0.5em;display: flex;flex-direction: column;align-items: center;">
-			<image :style="{'background': 'url('+avatar+') no-repeat 55% 30% / 230%','transform': 'translateY(-50%)','position': 'absolute','width':'5em','height': '5em','border-radius': '50px'}"></image>
+			<image :src="avatar" style="transform: translateY(-50%);position: absolute;width:5em;height: 5em;border-radius: 50px"></image>
 
 			<view style="margin-top: 2.5em;font-size: 1.1em;color: #F0C078;">金牌讲师</view>
 			<view style="margin: 0.2em;font-size: 1.3em;">{{name}}</view>
@@ -10,7 +10,7 @@
 			</view>
 		</view>
 		<view style="box-shadow:0px 5px 5px 0px rgba(0,0,0,0.1);border-radius: 10px;background-color:white;width: 90%;height:15%;margin: 0em 0.5em 0.5em 0.5em;">
-			<view style="margin: 0em 1em;border-bottom:1px solid #F0F0F0;display: flex;padding: 0.75em;align-items: center;">
+			<!-- <view style="margin: 0em 1em;border-bottom:1px solid #F0F0F0;display: flex;padding: 0.75em;align-items: center;">
 				<view style="flex: 0.15;">
 					<image src="../../static/images/timetable.png" mode="widthFix" style="width: 60%;"></image>
 				</view>
@@ -18,7 +18,7 @@
 				<view style="flex: 0.05;">
 					<text style="display: inline-block;width: 20rpx;height: 20rpx;border-top: 1px solid #A8A8A8;border-right: 1px solid #A8A8A8;transform: rotate(45deg);"></text>
 				</view>
-			</view>
+			</view> -->
 			<view style="margin: 0em 1em;border-bottom:1px solid #F0F0F0;display: flex;padding: 0.75em;align-items: center;">
 				<view style="flex: 0.15;">
 					<image src="../../static/images/course.png" mode="widthFix" style="width: 60%;"></image>
@@ -28,7 +28,7 @@
 					<text style="display: inline-block;width: 20rpx;height: 20rpx;border-top: 1px solid #A8A8A8;border-right: 1px solid #A8A8A8;transform: rotate(45deg);"></text>
 				</view>
 			</view>
-			<view style="margin: 0em 1em;border-bottom:1px solid #F0F0F0;display: flex;padding: 0.75em;align-items: center;">
+			<!-- <view style="margin: 0em 1em;border-bottom:1px solid #F0F0F0;display: flex;padding: 0.75em;align-items: center;">
 				<view style="flex: 0.15;">
 					<image src="../../static/images/order.png" mode="widthFix" style="width: 60%;"></image>
 				</view>
@@ -36,7 +36,7 @@
 				<view style="flex: 0.05">
 					<text style="display: inline-block;width: 20rpx;height: 20rpx;border-top: 1px solid #A8A8A8;border-right: 1px solid #A8A8A8;transform: rotate(45deg);"></text>
 				</view>
-			</view>
+			</view> -->
 			<view style="margin: 0em 1em;display: flex;padding: 0.75em;align-items: center;">
 				<view style="flex: 0.15;">
 					<image src="../../static/images/profit.png" mode="widthFix" style="width: 60%;"></image>
@@ -108,7 +108,7 @@
 
 <style>
 	page {
-		height: 100%;
+		/* height: 100%; */
 		background-color: #F0F0F0;
 	}
 </style>

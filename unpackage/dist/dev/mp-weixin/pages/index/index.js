@@ -289,6 +289,7 @@ var _default =
 
   },
   onLoad: function onLoad() {var _this = this;
+
     var statusBarHeight = uni.getSystemInfoSync().statusBarHeight;
     if (statusBarHeight == 44) {
       this.titleHeight = '83px';
@@ -570,6 +571,11 @@ var _default =
         fail: function fail() {
           console.log("fail");
         } });
+
+    },
+    tt: function tt() {
+      uni.navigateTo({
+        url: '../invitation/invitation' });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

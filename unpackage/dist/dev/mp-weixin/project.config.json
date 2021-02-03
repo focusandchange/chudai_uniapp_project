@@ -25,8 +25,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/invitation/invitation",
-          "pathName": "pages/invitation/invitation",
+          "name": "pages/withdrawal/withdrawal",
+          "pathName": "pages/withdrawal/withdrawal",
           "scene": null
         }
       ]

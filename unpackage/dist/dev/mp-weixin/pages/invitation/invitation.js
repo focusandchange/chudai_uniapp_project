@@ -175,11 +175,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
+
 {
   data: function data() {
-    return {};
-
+    return {
+      show: "none" };
 
   },
   methods: {
@@ -189,18 +213,34 @@ var _default =
 
     },
     invitationFriend: function invitationFriend() {
-
+      this.show = "";
+    },
+    off: function off() {
+      this.show = "none";
     } },
 
   onShareAppMessage: function onShareAppMessage(res) {
-    // if (res.from === 'button') {// 来自页面内分享按钮
-    //   console.log(res.target)
-    // }
     return {
       title: '自定义分享标题',
-      path: '../index/index',
-      imageUrl: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-uni-app-doc/d8590190-4f28-11eb-b680-7980c8a877b8.png" };
+      path: '/pages/userLogin/userLogin?invite_id=65',
+      imageUrl: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-uni-app-doc/d8590190-4f28-11eb-b680-7980c8a877b8.png",
+      success: function success(res) {
+        // 转发成功之后的回调
+        if (res.errMsg == 'shareAppMessage:ok') {
+          console.log("成功");
+        }
+      },
+      fail: function fail() {
+        console.log("失败");
+      } };
 
+  },
+  onShareTimeline: function onShareTimeline(res) {
+    return {
+      title: '标题', //字符串 自定义标题
+      path: '/pages/userLogin/userLogin?invite_id=65',
+      imageUrl: "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-uni-app-doc/d8590190-4f28-11eb-b680-7980c8a877b8.png" //图片地址
+    };
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

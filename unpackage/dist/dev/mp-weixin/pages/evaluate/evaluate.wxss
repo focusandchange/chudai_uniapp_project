@@ -1,0 +1,30 @@
+
+@font-face {  
+  font-family: 'FontAwesome';  
+  src: url('https://netdna.bootstrapcdn.com/font-awesome/3.2.1/font/fontawesome-webfont.woff?v=3.2.1') format('woff');
+}
+.star{margin-right:30rpx;}
+/*五角星之间的间距*/
+.star2{margin-right:0rpx;}
+/*五角星*/
+.star .icon:before {content: '\f006';font-family: FontAwesome; position: absolute;left: 0;top: 0;display: block;  overflow: hidden;}
+.star .icon {display: block; font-size: 21px; text-align: center; width: 38rpx;height: 56rpx;line-height: 56rpx;position: relative;white-space: pre;}
+.star .icon2:before {content: '\f005';font-family: FontAwesome; position: absolute;left: 0;top: 0;display: block;  overflow: hidden;}
+.star .icon2 {display: block; font-size: 21px; text-align: center; width: 38rpx;height: 56rpx;line-height: 56rpx;position: relative;white-space: pre;}
+/*灰色五角星*/
+.star .icon_gray{color:#3297FF}
+/*黄色五角星*/
+.star .icon_yellow:before {color: #3297FF;}
+/*五角星*/
+.star2 .icon:before {content: '\f006'; font-family: FontAwesome; position: absolute;left: 0;top: 0;display: block;  overflow: hidden;}
+.star2 .icon {display: block; font-size: 10px; text-align: center; width: 28rpx;height: 56rpx;line-height: 56rpx;position: relative;white-space: pre;}
+.star2 .icon2:before {content: '\f005'; font-family: FontAwesome; position: absolute;left: 0;top: 0;display: block;  overflow: hidden;}
+.star2 .icon2 {display: block; font-size: 10px; text-align: center; width: 28rpx;height: 56rpx;line-height: 56rpx;position: relative;white-space: pre;}
+/*灰色五角星*/
+.star2 .icon_gray{color:#3297FF}
+/*黄色五角星*/
+.star2 .icon_yellow:before {color: #3297FF;}
+
+
+
+

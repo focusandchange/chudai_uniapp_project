@@ -245,7 +245,7 @@ var _default =
       name: "",
       lecturer_introduction: "",
       brief_introduction: "",
-      avatar: "../../static/images/teacher.png",
+      avatar: "static/images/teacher.png",
       course_sort_name: "" };
 
 
